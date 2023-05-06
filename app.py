@@ -27,7 +27,7 @@ query = st.text_input("Enter your query here:")
 if query:
     # read data from the pdf file
     with open('/path/to/LegalAI.pdf', 'rb') as f:
-        pdf_reader = PdfFileReader(f)
+        pdf_reader = PdfReader(f)
         raw_text = ""
         for page in pdf_reader.pages:
             raw_text += page.extract_text()
